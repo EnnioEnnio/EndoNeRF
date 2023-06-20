@@ -16,7 +16,7 @@ We recommend using Miniconda to set up an environment:
 
 ```bash
 cd EndoNeRF
-conda create -n endonerf python=3.6
+conda create -n endonerf python=3.10
 conda activate endonerf
 pip install -r requirements.txt
 cd torchsearchsorted
