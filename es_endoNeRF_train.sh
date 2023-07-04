@@ -12,4 +12,4 @@
 cudaenv="endonerf3"
 source /dhc/home/ennio.strohauer/conda3/bin/activate
 conda activate $cudaenv
-/dhc/home/ennio.strohauer/conda3/envs/$cudaenv/bin/python python run_endonerf.py --config configs/conf_cutting_tissues_twice.txt --render_only
+/dhc/home/ennio.strohauer/conda3/envs/$cudaenv/bin/python run_endonerf.py --config configs/conf_cutting_tissues_twice_TEST.txt
