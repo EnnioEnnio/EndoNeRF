@@ -48,11 +48,13 @@ def combine_videos(video1_path, video2_path, output_path, loop_count):
 
 
 # Usage
-video1_name = "cutting_tissues_twice_fixidentity_100000_rgb.mp4"
-video2_name = "cutting_tissues_twice_sharpened_twice_fixidentity_100000_rgb.mp4"
-video1_path = f"/dhc/home/ennio.strohauer/EndoNeRF/logs/cutting_tissues_twice/{video1_name}"
-video2_path = f"/dhc/home/ennio.strohauer/EndoNeRF/logs/cutting_tissues_twice_sharpened_twice/{video2_name}"
-output_path = "/dhc/home/ennio.strohauer/EndoNeRF/video_comparisons/base_vs_sharpened_twice.mp4"
+# video1_name = "cutting_tissues_twice_fixidentity_100000_rgb.mp4"
+video1_name = "cutting_tissues_twice_HITNet_fixidentity_100000_rgb.mp4"
+video2_name = "cutting_tissues_twice_HITNet_model2_fixidentity_100000_rgb.mp4"
+# video1_path = f"/dhc/home/ennio.strohauer/EndoNeRF/logs/cutting_tissues_twice/{video1_name}"
+video1_path = f"/dhc/home/ennio.strohauer/EndoNeRF/logs/cutting_tissues_twice_HITNet_StereoNet/{video1_name}"
+video2_path = f"/dhc/home/ennio.strohauer/EndoNeRF/logs/cutting_tissues_twice_HITNet_model2/{video2_name}"
+output_path = "/dhc/home/ennio.strohauer/EndoNeRF/video_comparisons/StereoNet(corrected)_vs_HITNetXL.mp4"
 loop_count = 3
 
 combine_videos(video1_path, video2_path, output_path, loop_count)

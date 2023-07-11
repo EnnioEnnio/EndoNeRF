@@ -1,8 +1,8 @@
 #!/bin/bash -eux
-#SBATCH --job-name=es_endoNeRF
+#SBATCH --job-name=es_endoNeRF_eval1
 #SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=ennio.strohauer@mattermost
-#SBATCH --partition=gpua100 # -p
+#SBATCH --partition=gpupro # -p
 #SBATCH --cpus-per-task=10 # -c
 #SBATCH --mem=50gb
 #SBATCH --gpus=1
@@ -12,7 +12,5 @@
 cudaenv="endonerf3"
 source /dhc/home/ennio.strohauer/conda3/bin/activate
 conda activate $cudaenv
-/dhc/home/ennio.strohauer/conda3/envs/$cudaenv/bin/python run_endonerf.py --config configs/conf_cutting_tissues_twice.txt --render_only
-/dhc/home/ennio.strohauer/conda3/envs/$cudaenv/bin/python run_endonerf.py --config configs/conf_cutting_tissues_twice_HITNet.txt --render_only
-/dhc/home/ennio.strohauer/conda3/envs/$cudaenv/bin/python run_endonerf.py --config configs/conf_cutting_tissues_twice_sharpened_once.txt --render_only
-/dhc/home/ennio.strohauer/conda3/envs/$cudaenv/bin/python run_endonerf.py --config configs/conf_cutting_tissues_twice_sharpened_twice.txt --render_only
+/dhc/home/ennio.strohauer/conda3/envs/$cudaenv/bin/python run_endonerf.py --config configs/conf_cutting_tissues_twice_HITNet_StereoNet.txt --render_only
+/dhc/home/ennio.strohauer/conda3/envs/$cudaenv/bin/python run_endonerf.py --config configs/conf_cutting_tissues_twice_HITNet_HITNetXL.txt --render_only
