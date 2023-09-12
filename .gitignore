@@ -1,6 +1,5 @@
 logs/
 _configs/
-es_endoNeRF.sh
 .DS_Store
 
 # Byte-compiled / optimized / DLL files
@@ -135,3 +134,4 @@ dmypy.json
 
 conf_*
 *.mp4
+*.sh
